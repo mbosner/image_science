@@ -149,8 +149,9 @@ class ImageScience
                   message);
       }
     END
-
-    builder.add_to_init "FreeImage_SetOutputMessage(FreeImageErrorHandler);"
+    
+    # this throws exceptions
+    #builder.add_to_init "FreeImage_SetOutputMessage(FreeImageErrorHandler);"
 
     builder.c_singleton <<-"END"
       VALUE with_image(char * input) {
